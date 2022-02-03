@@ -2,16 +2,22 @@ import React from "react";
 import AddCategoria from '../../components/AddCategoria';
 import {shallow}   from 'enzyme'
 
+import '@testing-library/jest-dom';
 
 describe('Prueba component - AddCategoria ',() => {
 
-    const setCategorias = () => {};
+    //const setCategorias = () => {};
+    const setCategorias = jest.fn();
+
 
     let wrapper;
 
-    beforeEach( () => {        
+    beforeEach( () => {   
+        jest.clearAllMocks();
+
         wrapper = shallow(<AddCategoria 
-            setCategorias={setCategorias} />);
+                                setCategorias={setCategorias} 
+                          />);
     });
 
 
@@ -32,7 +38,17 @@ describe('Prueba component - AddCategoria ',() => {
         
     });
 
+    test('AddCategoria - submit - no debe ingresar a setCategoria',() => {
 
+        wrapper.find('form').simulate('submit',{preventDefault(){}});
+        
+        expect(setCategorias).not.toHaveBeenCalled();
+        
+
+
+        
+        
+    });
 
 
 });
