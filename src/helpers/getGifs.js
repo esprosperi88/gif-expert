@@ -1,4 +1,4 @@
-export const  getGit = async(Categoria) => {
+export const  getGif = async(Categoria) => {
     const apiKey = 'RAQQrVUADcsM1EZJXD4UMq8kFXezUD91';
     
     const url   = `http://api.giphy.com/v1/gifs/search?api_key=${ apiKey }&q=${ encodeURI(Categoria) }&limit=10`;
