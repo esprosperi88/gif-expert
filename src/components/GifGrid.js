@@ -1,15 +1,14 @@
-
-import React, { useState } from 'react';
+import React from 'react';
 import PropsTypes from 'prop-types';
 import { GifGridItem } from './GifGridItem';
 import  {useFetchGifs} from '../hooks/useFetchGifs';
 
-export const GifGrid =( {Categoria}) =>{
+export const GifGrid =( {categoria}) =>{
 
-    const {data:gifts,loading} = useFetchGifs(Categoria);
+    const {data:gifts,loading} = useFetchGifs(categoria);
 
     return <>
-            <h3 className="animate__animated animate__fadeIn" >{Categoria}</h3>    
+            <h3 className="animate__animated animate__fadeIn" >{categoria}</h3>    
             <div className="card-grid">   
                 {
                 gifts.map(item => (
@@ -27,7 +26,7 @@ export const GifGrid =( {Categoria}) =>{
 
 GifGrid.propTypes={
 
-    Categoria: PropsTypes.string.isRequired
+    categoria: PropsTypes.string.isRequired
 
 }
 

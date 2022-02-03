@@ -44,7 +44,6 @@ describe('Prueba component - GifGridItem',() => {
     test('GifGridItem - verifica clase CSS  ',() => {
         const div = wrapper.find('div');
 
-        console.log(div);
 
 
         expect (div.prop('className').includes('animate__fadeIn')).toBe(true);

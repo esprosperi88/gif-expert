@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Prueba component - GitExpertApp  GitExpertApp - snapshot 1`] = `
+<Fragment>
+  <h2>
+    gif-expert
+  </h2>
+  <AddCategoria
+    setCategorias={[Function]}
+  />
+  <hr />
+  <ol>
+    <GifGrid
+      categoria="dragon ball"
+      key="dragon ball"
+    />
+    <GifGrid
+      categoria="goku"
+      key="goku"
+    />
+  </ol>
+  <hr />
+  <button
+    onClick={[Function]}
+  >
+    button
+  </button>
+</Fragment>
+`;
